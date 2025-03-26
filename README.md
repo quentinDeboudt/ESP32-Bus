@@ -61,8 +61,6 @@ Ce projet utilise un ESP32 pour récupérer les horaires de bus depuis une API e
 
 ## License
 
-Ce projet est sous [MIT License](LICENSE).
-
 
 
 ![image](https://github.com/user-attachments/assets/b0ba140b-d81f-4ce7-8b69-b0bb351c693c)
