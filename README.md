@@ -58,5 +58,6 @@ Ce projet utilise un microcontrôleur ESP32 pour afficher les informations d'arr
 5. **Contrôle de l'affichage** : Utilisez la télécommande infrarouge pour allumer/éteindre l'écran et naviguer entre les enregistrements des bus.
 
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b0ba140b-d81f-4ce7-8b69-b0bb351c693c)
+
 
