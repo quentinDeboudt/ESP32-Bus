@@ -56,3 +56,7 @@ Ce projet utilise un microcontrôleur ESP32 pour afficher les informations d'arr
 3. **Récupération des données** : L'ESP32 récupérera les données d'arrivée des bus en temps réel depuis l'API STAR.
 4. **Affichage des données** : Le nom de l'arrêt de bus et l'heure d'arrivée seront affichés sur l'écran LCD.
 5. **Contrôle de l'affichage** : Utilisez la télécommande infrarouge pour allumer/éteindre l'écran et naviguer entre les enregistrements des bus.
+
+
+![Uploading image.png…]()
+
