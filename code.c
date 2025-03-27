@@ -14,7 +14,10 @@ const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 3600;  // UTC+1
 const int   daylightOffset_sec = 3600; // +1h d'été
 
-// URL de l'API
+/**
+ * API Star Rennes: (https://data.explore.star.fr/api/explore/v2.1/console)
+ * refine = idarret%3A"0123" (search for your id_arret: https://data.explore.star.fr/map/+106b59a6e2294b7b/edit/)
+ */
 const char* apiURL = "https://data.explore.star.fr/api/explore/v2.1/catalog/datasets/tco-bus-circulation-passages-tr/records?&order_by=arrivee&limit=6&refine=idarret%3A%221273%22&lang=fr&timezone=Europe%2FParis&include_links=false";
 
 // Initialize the LCD screen with the specified pins (rs, enable, d4, d5, d6, d7)
