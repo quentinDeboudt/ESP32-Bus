@@ -3,12 +3,14 @@
 Ce projet utilise un ESP32 pour récupérer les horaires de bus depuis une API et les afficher sur un écran LCD. Il est conçu pour aider les utilisateurs à consulter les horaires de passage des bus directement depuis un appareil alimenté par ESP32.
 
 ## Fonctionnalités
+```
 - Affiche les destinations des bus et leurs horaires d'arrivée sur un écran LCD 16x2.
 - Récupère les données depuis une API externe (`https://data.explore.star.fr/`) pour obtenir les horaires des bus.
 - Met à jour les horaires affichés lorsqu'un bouton est pressé.
 - Calcule automatiquement le temps restant avant le passage du prochain bus en fonction de l'heure actuelle.
-
+```
 ## Composants
+
 - **Carte ESP32 Dev Board** : Contrôleur principal
 - **Écran LCD 16x2** : Affichage des horaires de bus
 - **Bouton poussoir (GPIO 4)** : Permet de rafraîchir les données des horaires
@@ -25,21 +27,28 @@ Ce projet utilise un ESP32 pour récupérer les horaires de bus depuis une API e
   - `ArduinoJson.h` : Pour le traitement des données JSON.
   - `NTPClient.h` : Pour obtenir l'heure locale via NTP.
 
+
 ### Étapes
+
 1. Clonez ce dépôt ou téléchargez-le en tant que fichier ZIP.
 2. Ouvrez le projet dans votre IDE (Arduino IDE ou VSCode avec PlatformIO).
 3. Remplissez vos informations Wi-Fi dans les variables `ssid` et `password`.
+3. Changer l'URL de l'API: `idarret`.
 4. Téléversez le code sur votre ESP32.
 
 ### Connexion du matériel
-- **Écran LCD** : Connectez l'écran LCD à l'ESP32 selon les broches définies dans le code :
-  - RS -> GPIO 14
-  - Enable -> GPIO 27
-  - D4 -> GPIO 26
-  - D5 -> GPIO 25
-  - D6 -> GPIO 33
-  - D7 -> GPIO 32
+**Écran LCD** : Connectez l'écran LCD à l'ESP32 selon les broches définies dans le code :
+| Écran LCD | ESP32 |
+|:--------------|:-------------:|
+| RS | GPIO 14 |
+| Enable | GPIO 27 |
+| D4 | GPIO 26 |
+| D5 | GPIO 25 |
+| D6 | GPIO 33 |
+| D7 | GPIO 32 |
+
 - **Bouton poussoir** : Connectez un bouton poussoir à la broche GPIO 4. Il sera utilisé pour rafraîchir les horaires de bus.
+![image](https://github.com/user-attachments/assets/b0ba140b-d81f-4ce7-8b69-b0bb351c693c)
 
 ## Utilisation
 
@@ -51,7 +60,6 @@ Ce projet utilise un ESP32 pour récupérer les horaires de bus depuis une API e
 
 1. **Récupération des horaires** : Le code envoie une requête HTTP à l'API de Star Rennes pour obtenir les horaires des bus à l'arrêt spécifié.
 2. **Affichage des horaires** : Les horaires des bus sont extraits de la réponse JSON et affichés sur l'écran LCD. Les horaires sont affichés par groupe de 3, séparés par des virgules.
-3. **Calcul du temps restant** : Le temps restant avant l'arrivée du bus est calculé en fonction de l'heure actuelle et de l'heure de passage du bus.
 
 ## Dépannage
 
@@ -59,10 +67,12 @@ Ce projet utilise un ESP32 pour récupérer les horaires de bus depuis une API e
 - **Problèmes de récupération des données de l'API** : Si l'API ne répond pas, vérifiez votre connexion Internet et que l'API est accessible depuis votre réseau.
 - **Problèmes d'affichage sur l'écran LCD** : Vérifiez les connexions de l'écran LCD aux broches de l'ESP32 et assurez-vous que la bibliothèque `LiquidCrystal` est correctement installée.
 
-## License
+***
+## Image
 
 
+![1743076046977](https://github.com/user-attachments/assets/4ac6347e-4b97-49b4-b411-ac936dbb48fe)
 
-![image](https://github.com/user-attachments/assets/b0ba140b-d81f-4ce7-8b69-b0bb351c693c)
+
 
 
